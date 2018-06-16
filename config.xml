@@ -9,14 +9,18 @@
   <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
     <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>true</disableSignup>
-    <enableCaptcha>false</enableCaptcha>
+  <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
+    <githubWebUri>https://github.com</githubWebUri>
+    <githubApiUri>https://api.github.com</githubApiUri>
+    <clientID>b8c11b0a393ffd1be3e1</clientID>
+    <clientSecret>{AQAAABAAAAAwKYQ5pG8OU96wPOO1zHDEsvETp3WFC21JNmCLIMD8RREsxZJkB2ql00hb3rYGIfF2EK3n1BZYHyHX+lHW0sWs5A==}</clientSecret>
+    <oauthScopes>read:org,user:email</oauthScopes>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
   <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
