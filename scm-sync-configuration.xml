@@ -3,7 +3,7 @@
   <scm class="hudson.plugins.scm_sync_configuration.scms.ScmSyncGitSCM"/>
   <scmRepositoryUrl>scm:git:git@github.com:admxxi/jenkins-config.git</scmRepositoryUrl>
   <noUserCommitMessage>true</noUserCommitMessage>
-  <displayStatus>false</displayStatus>
+  <displayStatus>true</displayStatus>
   <commitMessagePattern>[message]</commitMessagePattern>
   <manualSynchronizationIncludes>
     <include>org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml</include>
